@@ -15,7 +15,8 @@ function Home({ news }) {
   return (
     <div className={s.root}>
       <div className={s.container}>
-        <h1 className={s.title}>React.js News</h1>
+        <h2 className={s.title}>Sort Feed</h2>
+        <p>This file can be found in routes > home > Home.js!</p>
         <ul className={s.news}>
           {news.map((item, index) => (
             <li key={index} className={s.newsItem}>

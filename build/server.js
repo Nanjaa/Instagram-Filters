@@ -1963,6 +1963,11 @@ module.exports =
         'div',
         { className: _Feedback2.default.container },
         _react2.default.createElement(
+          'p',
+          null,
+          'This is found in components > Feedback > Feedback.js'
+        ),
+        _react2.default.createElement(
           'a',
           {
             className: _Feedback2.default.link,
@@ -2043,7 +2048,7 @@ module.exports =
         _react2.default.createElement(
           'span',
           { className: _Footer2.default.text },
-          '© Your Company'
+          'This is found in components > Footer > Footer.js'
         ),
         _react2.default.createElement(
           'span',
@@ -2128,7 +2133,7 @@ module.exports =
           _react2.default.createElement(
             'span',
             { className: _Header2.default.brandTxt },
-            'Your Company'
+            'The logo - the heading can be found in components > Header > Header.js'
           )
         ),
         _react2.default.createElement(
@@ -2137,12 +2142,12 @@ module.exports =
           _react2.default.createElement(
             'h1',
             { className: _Header2.default.bannerTitle },
-            'React'
+            'Instagram Filters'
           ),
           _react2.default.createElement(
             'p',
             { className: _Header2.default.bannerDesc },
-            'Complex web apps made easy'
+            'Sort Your Instagram Feed'
           )
         )
       )
@@ -2220,6 +2225,11 @@ module.exports =
         'span',
         { className: _Navigation2.default.spacer },
         'or'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'Hello there! About - Sign Up can be found in components > Navigation > Navigation.js'
       ),
       _react2.default.createElement(
         _Link2.default,
@@ -3523,9 +3533,14 @@ module.exports =
         'div',
         { className: _Home2.default.container },
         _react2.default.createElement(
-          'h1',
+          'h2',
           { className: _Home2.default.title },
-          'React.js News'
+          'Sort Feed'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'This file can be found in routes > home > Home.js!'
         ),
         _react2.default.createElement(
           'ul',

@@ -21,6 +21,7 @@ function Navigation({ className }) {
       <span className={s.spacer}> | </span>
       <Link className={s.link} to="/login">Log in</Link>
       <span className={s.spacer}>or</span>
+      <p>Hello there! About - Sign Up can be found in components > Navigation > Navigation.js</p>
       <Link className={cx(s.link, s.highlight)} to="/register">Sign up</Link>
     </div>
   );

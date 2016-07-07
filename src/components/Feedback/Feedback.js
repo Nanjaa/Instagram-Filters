@@ -15,6 +15,7 @@ function Feedback() {
   return (
     <div className={s.root}>
       <div className={s.container}>
+      <p>This is found in components > Feedback > Feedback.js</p>
         <a
           className={s.link}
           href="https://gitter.im/kriasoft/react-starter-kit"
