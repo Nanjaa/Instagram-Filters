@@ -16,7 +16,7 @@ function Register({ title }) {
     <div className={s.root}>
       <div className={s.container}>
         <h1>{title}</h1>
-        <p>...</p>
+        <p>This is the same idea as the login. It has an index.js file that shows what's in src > routes > register > Register.js</p>
       </div>
     </div>
   );

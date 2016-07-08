@@ -1714,6 +1714,11 @@ module.exports =
           'div',
           null,
           _react2.default.createElement(_Header2.default, null),
+          _react2.default.createElement(
+            'p',
+            null,
+            'EVERY PAGE IS LOADED FROM APP.JS!!!'
+          ),
           this.props.children,
           _react2.default.createElement(_Feedback2.default, null),
           _react2.default.createElement(_Footer2.default, null)
@@ -1807,9 +1812,15 @@ module.exports =
           _react2.default.createElement(
             'div',
             { className: _ContentPage2.default.container },
+            _react2.default.createElement(
+              'p',
+              null,
+              'HELLO WORLD THIS IS THE CONTENT.JS FILE'
+            ),
             this.props.path === '/' ? null : _react2.default.createElement(
               'h1',
               null,
+              'The content is loaded from src > componenets > contentpage > contentpage.js',
               this.props.title
             ),
             _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: this.props.content || '' } })
@@ -2294,16 +2305,22 @@ module.exports =
   
   var _NotFoundPage2 = _interopRequireDefault(_NotFoundPage);
   
+  var _Link = __webpack_require__(14);
+  
+  var _Link2 = _interopRequireDefault(_Link);
+  
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
   
-  var title = 'Page Not Found'; /**
-                                 * React Starter Kit (https://www.reactstarterkit.com/)
-                                 *
-                                 * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
-                                 *
-                                 * This source code is licensed under the MIT license found in the
-                                 * LICENSE.txt file in the root directory of this source tree.
-                                 */
+  /**
+   * React Starter Kit (https://www.reactstarterkit.com/)
+   *
+   * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
+   *
+   * This source code is licensed under the MIT license found in the
+   * LICENSE.txt file in the root directory of this source tree.
+   */
+  
+  var title = 'Page Not Found';
   
   var NotFoundPage = function (_Component) {
     (0, _inherits3.default)(NotFoundPage, _Component);
@@ -2334,6 +2351,11 @@ module.exports =
             'p',
             null,
             'Sorry, but the page you were trying to view does not exist.'
+          ),
+          _react2.default.createElement(
+            _Link2.default,
+            { className: _NotFoundPage2.default.link, to: '/' },
+            'Go back home. This file is in src > components > notfound'
           )
         );
       }
@@ -3418,7 +3440,7 @@ module.exports =
         _react2.default.createElement(
           'p',
           null,
-          '...'
+          'Hello there. This can be found in src > routes > contact.'
         )
       )
     );
@@ -3701,7 +3723,7 @@ module.exports =
         _react2.default.createElement(
           'p',
           null,
-          '...'
+          'So this page was a little confusing. There is an index.js page that loads this, but the content is in src > routes > login > Login.js'
         )
       )
     );
@@ -3823,7 +3845,7 @@ module.exports =
         _react2.default.createElement(
           'p',
           null,
-          '...'
+          'This is the same idea as the login. It has an index.js file that shows what\'s in src > routes > register > Register.js'
         )
       )
     );

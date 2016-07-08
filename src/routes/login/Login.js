@@ -16,7 +16,7 @@ function Login({ title }) {
     <div className={s.root}>
       <div className={s.container}>
         <h1>{title}</h1>
-        <p>...</p>
+        <p>So this page was a little confusing. There is an index.js page that loads this, but the content is in src > routes > login > Login.js</p>
       </div>
     </div>
   );

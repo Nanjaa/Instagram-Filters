@@ -16,7 +16,7 @@ function Contact({ title }) {
     <div className={s.root}>
       <div className={s.container}>
         <h1>{title}</h1>
-        <p>...</p>
+        <p>Hello there. This can be found in src > routes > contact.</p>
       </div>
     </div>
   );

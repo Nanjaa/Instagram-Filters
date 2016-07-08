@@ -10,6 +10,7 @@
 import React, { Component, PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './NotFoundPage.scss';
+import Link from '../Link';
 
 const title = 'Page Not Found';
 
@@ -30,6 +31,7 @@ class NotFoundPage extends Component {
       <div>
         <h1>{title}</h1>
         <p>Sorry, but the page you were trying to view does not exist.</p>
+        <Link className={s.link} to="/">Go back home. This file is in src > components > notfound</Link>
       </div>
     );
   }

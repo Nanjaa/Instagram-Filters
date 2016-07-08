@@ -31,7 +31,8 @@ class ContentPage extends Component {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          {this.props.path === '/' ? null : <h1>{this.props.title}</h1>}
+        <p>HELLO WORLD THIS IS THE CONTENT.JS FILE</p>
+          {this.props.path === '/' ? null : <h1>The content is loaded from src > componenets > contentpage > contentpage.js{this.props.title}</h1>}
           <div dangerouslySetInnerHTML={{ __html: this.props.content || '' }} />
         </div>
       </div>

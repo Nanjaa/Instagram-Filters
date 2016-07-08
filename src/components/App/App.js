@@ -57,6 +57,7 @@ class App extends Component {
     return !this.props.error ? (
       <div>
         <Header />
+        <p>EVERY PAGE IS LOADED FROM APP.JS!!!</p>
         {this.props.children}
         <Feedback />
         <Footer />
