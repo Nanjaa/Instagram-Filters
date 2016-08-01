@@ -62,6 +62,7 @@ class App extends Component {
         <Feedback />
         <Footer />
       </div>
+      <script src="/bower_components/oauth-js/dist/oauth.js"></script>
     ) : this.props.children;
   }
 
