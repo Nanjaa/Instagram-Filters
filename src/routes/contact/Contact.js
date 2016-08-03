@@ -10,6 +10,7 @@
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Contact.scss';
+import oauthio from '../../../bower_components/oauth-js/dist/oauth.js';
 
 function Contact({ title }) {
   return (
