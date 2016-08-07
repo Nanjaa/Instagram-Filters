@@ -12,18 +12,26 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Header.scss';
 import Link from '../Link';
 import Navigation from '../Navigation';
-import oauthio from '../../../bower_components/oauth-js/dist/oauth.js';
 
-OAuth.initialize('No2d6YEh-siKpGj1Coq-yl8whNY')
+export default class Header extends React.Component {
+   componentDidMount() {
+  const OAuth = require( '../../../node_modules/oauthio-web/dist/oauth.js' );
+  console.log(OAuth);
+  OAuth.OAuth.initialize('No2d6YEh-siKpGj1Coq-yl8whNY');
+  OAuth.OAuth.popup('instagram').done(function(instagram) {
+    //make API calls with `facebook`
+  }).fail(function(err) {
+    //todo when the OAuth flow failed
+  });
+  }
 
-OAuth.popup('instagram').done(function(instagram) {
-  //make API calls with `facebook`
-}).fail(function(err) {
-  //todo when the OAuth flow failed
-});
+  constructor() {
+    super();    
+  }
+  
 
-function Header() {
-  return (
+    render() {
+      return (
     <div className={s.root}>
       <div className={s.container}>
         <Navigation className={s.nav} />
@@ -36,8 +44,6 @@ function Header() {
           <p className={s.bannerDesc}>Sort Your Instagram Feed</p>
         </div>
       </div>
-    </div>
-  );
+    </div> );
+    }
 }
-
-export default withStyles(Header, s);
