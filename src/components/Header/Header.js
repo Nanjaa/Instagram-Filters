@@ -12,26 +12,9 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Header.scss';
 import Link from '../Link';
 import Navigation from '../Navigation';
+import OauthPopup from "../OauthPopup/OauthPopup.js";
 
-export default class Header extends React.Component {
-  logIn() {
-    const OAuth = require( '../../../node_modules/oauthio-web/dist/oauth.js' );
-    console.log(OAuth);
-    OAuth.OAuth.initialize('No2d6YEh-siKpGj1Coq-yl8whNY');
-    OAuth.OAuth.popup('instagram').done(function(instagram) {
-     //make API calls with `instagram`
-     console.log(instagram);
-    }).fail(function(err) {
-      // popup fails
-      console.log('popup failed');
-    });
-  }
-
-  constructor() {
-    super();    
-  }
-  
-
+class Header extends React.Component {
   render() {
     return (
       <div className={s.root}>
@@ -41,7 +24,6 @@ export default class Header extends React.Component {
             <img src={require('./logo-small.png')} width="38" height="38" alt="React" />
             <span className={s.brandTxt}>The logo - the heading can be found in components > Header > Header.js</span>
           </Link>
-          <a href="#" onClick={this.logIn}>Log In</a>
           <div className={s.banner}>
             <h1 className={s.bannerTitle}>Instagram Filters</h1>
             <p className={s.bannerDesc}>Sort Your Instagram Feed</p>
@@ -51,3 +33,5 @@ export default class Header extends React.Component {
     );
   }
 }
+
+export default withStyles(Header, s);
