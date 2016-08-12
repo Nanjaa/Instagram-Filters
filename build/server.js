@@ -843,13 +843,13 @@ module.exports =
   
   var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
   
-  var _possibleConstructorReturn2 = __webpack_require__(11);
-  
-  var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-  
   var _createClass2 = __webpack_require__(9);
   
   var _createClass3 = _interopRequireDefault(_createClass2);
+  
+  var _possibleConstructorReturn2 = __webpack_require__(11);
+  
+  var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
   
   var _inherits2 = __webpack_require__(10);
   
@@ -871,6 +871,21 @@ module.exports =
   
   var OauthPopup = function (_React$Component) {
   	(0, _inherits3.default)(OauthPopup, _React$Component);
+  
+  	function OauthPopup(props) {
+  		(0, _classCallCheck3.default)(this, OauthPopup);
+  
+  		var _this = (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(OauthPopup).call(this, props));
+  
+  		_this.state = {
+  			loggedIn: false,
+  			name: 'New User'
+  		};
+  
+  		_this.logIn = _this.logIn.bind(_this);
+  		return _this;
+  	}
+  
   	(0, _createClass3.default)(OauthPopup, [{
   		key: 'logIn',
   		value: function logIn() {
@@ -879,24 +894,21 @@ module.exports =
   			OAuth.OAuth.popup('instagram').done(function (instagram) {
   				//make API calls with `instagram`
   				console.log(instagram);
-  			}).fail(function (err) {
+  				this.setState({
+  					name: 'Stephanie'
+  				});
+  			}.bind(this)).fail(function (err) {
   				console.log('popup failed');
   			});
   		}
-  	}]);
-  
-  	function OauthPopup() {
-  		(0, _classCallCheck3.default)(this, OauthPopup);
-  		return (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(OauthPopup).call(this));
-  	}
-  
-  	(0, _createClass3.default)(OauthPopup, [{
+  	}, {
   		key: 'render',
   		value: function render() {
   			return _react2.default.createElement(
   				'a',
   				{ className: _OauthPopup2.default.oauthLogin, href: '#', onClick: this.logIn },
-  				'Log In'
+  				'Hello, ',
+  				this.state.name
   			);
   		}
   	}]);
