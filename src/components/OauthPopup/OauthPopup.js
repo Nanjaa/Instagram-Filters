@@ -20,7 +20,7 @@ class OauthPopup extends React.Component {
 
 	render() {
 		return(
-			<a className={s.oauthLogin} href="" onClick={this.logIn}>Log In</a>
+			<a className={s.oauthLogin} href="#" onClick={this.logIn}>Log In</a>
 		)
 	}
 }
