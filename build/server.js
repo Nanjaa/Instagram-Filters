@@ -56,41 +56,41 @@ module.exports =
   
   var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
   
-  __webpack_require__(99);
+  __webpack_require__(100);
   
-  var _path = __webpack_require__(26);
+  var _path = __webpack_require__(25);
   
   var _path2 = _interopRequireDefault(_path);
   
-  var _express = __webpack_require__(116);
+  var _express = __webpack_require__(117);
   
   var _express2 = _interopRequireDefault(_express);
   
-  var _cookieParser = __webpack_require__(113);
+  var _cookieParser = __webpack_require__(114);
   
   var _cookieParser2 = _interopRequireDefault(_cookieParser);
   
-  var _bodyParser = __webpack_require__(111);
+  var _bodyParser = __webpack_require__(112);
   
   var _bodyParser2 = _interopRequireDefault(_bodyParser);
   
-  var _expressJwt = __webpack_require__(118);
+  var _expressJwt = __webpack_require__(119);
   
   var _expressJwt2 = _interopRequireDefault(_expressJwt);
   
-  var _expressGraphql = __webpack_require__(117);
+  var _expressGraphql = __webpack_require__(118);
   
   var _expressGraphql2 = _interopRequireDefault(_expressGraphql);
   
-  var _jsonwebtoken = __webpack_require__(125);
+  var _jsonwebtoken = __webpack_require__(126);
   
   var _jsonwebtoken2 = _interopRequireDefault(_jsonwebtoken);
   
-  var _server = __webpack_require__(132);
+  var _server = __webpack_require__(134);
   
   var _server2 = _interopRequireDefault(_server);
   
-  var _prettyError = __webpack_require__(131);
+  var _prettyError = __webpack_require__(132);
   
   var _prettyError2 = _interopRequireDefault(_prettyError);
   
@@ -106,7 +106,7 @@ module.exports =
   
   var _routes2 = _interopRequireDefault(_routes);
   
-  var _assets = __webpack_require__(98);
+  var _assets = __webpack_require__(99);
   
   var _assets2 = _interopRequireDefault(_assets);
   
@@ -350,15 +350,15 @@ module.exports =
 
   'use strict';
   
-  var _assign = __webpack_require__(23);
+  var _assign = __webpack_require__(22);
   
   var _assign2 = _interopRequireDefault(_assign);
   
-  var _stringify = __webpack_require__(101);
+  var _stringify = __webpack_require__(102);
   
   var _stringify2 = _interopRequireDefault(_stringify);
   
-  var _slicedToArray2 = __webpack_require__(109);
+  var _slicedToArray2 = __webpack_require__(110);
   
   var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
   
@@ -569,11 +569,11 @@ module.exports =
     value: true
   });
   
-  var _extends2 = __webpack_require__(107);
+  var _extends2 = __webpack_require__(108);
   
   var _extends3 = _interopRequireDefault(_extends2);
   
-  var _objectWithoutProperties2 = __webpack_require__(108);
+  var _objectWithoutProperties2 = __webpack_require__(109);
   
   var _objectWithoutProperties3 = _interopRequireDefault(_objectWithoutProperties2);
   
@@ -759,7 +759,7 @@ module.exports =
   
   var _bluebird2 = _interopRequireDefault(_bluebird);
   
-  var _nodeFetch = __webpack_require__(127);
+  var _nodeFetch = __webpack_require__(128);
   
   var _nodeFetch2 = _interopRequireDefault(_nodeFetch);
   
@@ -829,109 +829,17 @@ module.exports =
 /* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
-  'use strict';
-  
-  Object.defineProperty(exports, "__esModule", {
-  	value: true
-  });
-  
-  var _getPrototypeOf = __webpack_require__(7);
-  
-  var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
-  
-  var _classCallCheck2 = __webpack_require__(8);
-  
-  var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-  
-  var _createClass2 = __webpack_require__(9);
-  
-  var _createClass3 = _interopRequireDefault(_createClass2);
-  
-  var _possibleConstructorReturn2 = __webpack_require__(11);
-  
-  var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-  
-  var _inherits2 = __webpack_require__(10);
-  
-  var _inherits3 = _interopRequireDefault(_inherits2);
-  
-  var _react = __webpack_require__(1);
-  
-  var _react2 = _interopRequireDefault(_react);
-  
-  var _withStyles = __webpack_require__(4);
-  
-  var _withStyles2 = _interopRequireDefault(_withStyles);
-  
-  var _OauthPopup = __webpack_require__(87);
-  
-  var _OauthPopup2 = _interopRequireDefault(_OauthPopup);
-  
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-  
-  var OauthPopup = function (_React$Component) {
-  	(0, _inherits3.default)(OauthPopup, _React$Component);
-  
-  	function OauthPopup(props) {
-  		(0, _classCallCheck3.default)(this, OauthPopup);
-  
-  		var _this = (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(OauthPopup).call(this, props));
-  
-  		_this.state = {
-  			loggedIn: false,
-  			name: 'New User'
-  		};
-  
-  		_this.logIn = _this.logIn.bind(_this);
-  		return _this;
-  	}
-  
-  	(0, _createClass3.default)(OauthPopup, [{
-  		key: 'logIn',
-  		value: function logIn() {
-  			var OAuth = __webpack_require__(133);
-  			OAuth.OAuth.initialize('No2d6YEh-siKpGj1Coq-yl8whNY');
-  			OAuth.OAuth.popup('instagram').done(function (instagram) {
-  				//make API calls with `instagram`
-  				console.log(instagram);
-  				this.setState({
-  					name: 'Stephanie'
-  				});
-  			}.bind(this)).fail(function (err) {
-  				console.log('popup failed');
-  			});
-  		}
-  	}, {
-  		key: 'render',
-  		value: function render() {
-  			return _react2.default.createElement(
-  				'a',
-  				{ className: _OauthPopup2.default.oauthLogin, href: '#', onClick: this.logIn },
-  				'Hello, ',
-  				this.state.name
-  			);
-  		}
-  	}]);
-  	return OauthPopup;
-  }(_react2.default.Component);
-  
-  exports.default = (0, _withStyles2.default)(OauthPopup, _OauthPopup2.default);
+  module.exports = { "default": __webpack_require__(116), __esModule: true };
 
 /***/ },
 /* 20 */
-/***/ function(module, exports, __webpack_require__) {
-
-  module.exports = { "default": __webpack_require__(115), __esModule: true };
-
-/***/ },
-/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
   "use strict";
   
   exports.__esModule = true;
   
-  var _defineProperty = __webpack_require__(103);
+  var _defineProperty = __webpack_require__(104);
   
   var _defineProperty2 = _interopRequireDefault(_defineProperty);
   
@@ -956,7 +864,7 @@ module.exports =
   }();
 
 /***/ },
-/* 22 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -1176,7 +1084,7 @@ module.exports =
       throw err;
     }
     try {
-      str = str || __webpack_require__(25).readFileSync(filename, 'utf8')
+      str = str || __webpack_require__(24).readFileSync(filename, 'utf8')
     } catch (ex) {
       rethrow(err, null, lineno)
     }
@@ -1208,31 +1116,31 @@ module.exports =
 
 
 /***/ },
-/* 23 */
+/* 22 */
 /***/ function(module, exports) {
 
   module.exports = require("babel-runtime/core-js/object/assign");
 
 /***/ },
-/* 24 */
+/* 23 */
 /***/ function(module, exports) {
 
   module.exports = require("babel-runtime/core-js/promise");
 
 /***/ },
-/* 25 */
+/* 24 */
 /***/ function(module, exports) {
 
   module.exports = require("fs");
 
 /***/ },
-/* 26 */
+/* 25 */
 /***/ function(module, exports) {
 
   module.exports = require("path");
 
 /***/ },
-/* 27 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -1241,7 +1149,7 @@ module.exports =
     value: true
   });
   
-  var _create = __webpack_require__(20);
+  var _create = __webpack_require__(19);
   
   var _create2 = _interopRequireDefault(_create);
   
@@ -1284,7 +1192,7 @@ module.exports =
   exports.default = Match;
 
 /***/ },
-/* 28 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -1297,15 +1205,15 @@ module.exports =
   
   var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
   
-  var _createClass2 = __webpack_require__(21);
+  var _createClass2 = __webpack_require__(20);
   
   var _createClass3 = _interopRequireDefault(_createClass2);
   
-  var _pathToRegexp = __webpack_require__(95);
+  var _pathToRegexp = __webpack_require__(96);
   
   var _pathToRegexp2 = _interopRequireDefault(_pathToRegexp);
   
-  var _Match = __webpack_require__(27);
+  var _Match = __webpack_require__(26);
   
   var _Match2 = _interopRequireDefault(_Match);
   
@@ -1338,7 +1246,7 @@ module.exports =
   exports.default = Route;
 
 /***/ },
-/* 29 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -1363,7 +1271,7 @@ module.exports =
   
   var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
   
-  var _create = __webpack_require__(20);
+  var _create = __webpack_require__(19);
   
   var _create2 = _interopRequireDefault(_create);
   
@@ -1371,11 +1279,11 @@ module.exports =
   
   var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
   
-  var _createClass2 = __webpack_require__(21);
+  var _createClass2 = __webpack_require__(20);
   
   var _createClass3 = _interopRequireDefault(_createClass2);
   
-  var _Route = __webpack_require__(28);
+  var _Route = __webpack_require__(27);
   
   var _Route2 = _interopRequireDefault(_Route);
   
@@ -1703,7 +1611,7 @@ module.exports =
   exports.default = Router;
 
 /***/ },
-/* 30 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -1736,7 +1644,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _emptyFunction = __webpack_require__(119);
+  var _emptyFunction = __webpack_require__(120);
   
   var _emptyFunction2 = _interopRequireDefault(_emptyFunction);
   
@@ -1744,15 +1652,15 @@ module.exports =
   
   var _App2 = _interopRequireDefault(_App);
   
-  var _Header = __webpack_require__(35);
+  var _Header = __webpack_require__(34);
   
   var _Header2 = _interopRequireDefault(_Header);
   
-  var _Feedback = __webpack_require__(33);
+  var _Feedback = __webpack_require__(32);
   
   var _Feedback2 = _interopRequireDefault(_Feedback);
   
-  var _Footer = __webpack_require__(34);
+  var _Footer = __webpack_require__(33);
   
   var _Footer2 = _interopRequireDefault(_Footer);
   
@@ -1838,7 +1746,7 @@ module.exports =
   exports.default = App;
 
 /***/ },
-/* 31 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -1940,7 +1848,7 @@ module.exports =
   exports.default = (0, _withStyles2.default)(ContentPage, _ContentPage2.default);
 
 /***/ },
-/* 32 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2034,7 +1942,7 @@ module.exports =
   exports.default = (0, _withStyles2.default)(ErrorPage, _ErrorPage2.default);
 
 /***/ },
-/* 33 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2104,7 +2012,7 @@ module.exports =
   exports.default = (0, _withStyles2.default)(Feedback, _Feedback2.default);
 
 /***/ },
-/* 34 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2189,7 +2097,7 @@ module.exports =
   exports.default = (0, _withStyles2.default)(Footer, _Footer2.default);
 
 /***/ },
-/* 35 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2234,7 +2142,7 @@ module.exports =
   
   var _Link2 = _interopRequireDefault(_Link);
   
-  var _Navigation = __webpack_require__(36);
+  var _Navigation = __webpack_require__(35);
   
   var _Navigation2 = _interopRequireDefault(_Navigation);
   
@@ -2261,7 +2169,7 @@ module.exports =
             _react2.default.createElement(
               _Link2.default,
               { className: _Header2.default.brand, to: '/' },
-              _react2.default.createElement('img', { src: __webpack_require__(96), width: '38', height: '38', alt: 'React' }),
+              _react2.default.createElement('img', { src: __webpack_require__(97), width: '38', height: '38', alt: 'React' }),
               _react2.default.createElement(
                 'span',
                 { className: _Header2.default.brandTxt },
@@ -2299,7 +2207,7 @@ module.exports =
   exports.default = (0, _withStyles2.default)(Header, _Header2.default);
 
 /***/ },
-/* 36 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2312,7 +2220,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _classnames = __webpack_require__(112);
+  var _classnames = __webpack_require__(113);
   
   var _classnames2 = _interopRequireDefault(_classnames);
   
@@ -2328,7 +2236,7 @@ module.exports =
   
   var _Link2 = _interopRequireDefault(_Link);
   
-  var _OauthPopup = __webpack_require__(19);
+  var _OauthPopup = __webpack_require__(37);
   
   var _OauthPopup2 = _interopRequireDefault(_OauthPopup);
   
@@ -2400,7 +2308,7 @@ module.exports =
   exports.default = (0, _withStyles2.default)(Navigation, _Navigation2.default);
 
 /***/ },
-/* 37 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2506,6 +2414,127 @@ module.exports =
   exports.default = (0, _withStyles2.default)(NotFoundPage, _NotFoundPage2.default);
 
 /***/ },
+/* 37 */
+/***/ function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+  	value: true
+  });
+  
+  var _getPrototypeOf = __webpack_require__(7);
+  
+  var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+  
+  var _classCallCheck2 = __webpack_require__(8);
+  
+  var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+  
+  var _createClass2 = __webpack_require__(9);
+  
+  var _createClass3 = _interopRequireDefault(_createClass2);
+  
+  var _possibleConstructorReturn2 = __webpack_require__(11);
+  
+  var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+  
+  var _inherits2 = __webpack_require__(10);
+  
+  var _inherits3 = _interopRequireDefault(_inherits2);
+  
+  var _react = __webpack_require__(1);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
+  var _withStyles = __webpack_require__(4);
+  
+  var _withStyles2 = _interopRequireDefault(_withStyles);
+  
+  var _OauthPopup = __webpack_require__(87);
+  
+  var _OauthPopup2 = _interopRequireDefault(_OauthPopup);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  var Ajax = __webpack_require__(133);
+  
+  var OauthPopup = function (_React$Component) {
+  	(0, _inherits3.default)(OauthPopup, _React$Component);
+  
+  	function OauthPopup(props) {
+  		(0, _classCallCheck3.default)(this, OauthPopup);
+  
+  		var _this = (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(OauthPopup).call(this, props));
+  
+  		_this.state = {
+  			loggedIn: false,
+  			name: 'New User',
+  			token: 0,
+  			url: 'https://api.instagram.com/v1/tags/nofilter/media/recent?access_token='
+  		};
+  
+  		_this.logIn = _this.logIn.bind(_this);
+  		_this.getInformation = _this.getInformation.bind(_this);
+  		return _this;
+  	}
+  
+  	(0, _createClass3.default)(OauthPopup, [{
+  		key: 'logIn',
+  		value: function logIn() {
+  			var OAuth = __webpack_require__(95);
+  			OAuth.OAuth.initialize('No2d6YEh-siKpGj1Coq-yl8whNY');
+  			OAuth.OAuth.popup('instagram').then(function (instagram) {
+  				//make API calls with `instagram`
+  				console.log(instagram);
+  				this.setState({
+  					name: instagram.user.full_name,
+  					token: instagram.access_token,
+  					url: this.state.url + instagram.access_token
+  				});
+  
+  				return instagram.get(this.state.url).done(function (data) {
+  					console.log(data);
+  				}).fail(function (err) {
+  					console.log(err);
+  				});
+  			}.bind(this)).then(function (data) {
+  				console.log(data);
+  			}).fail(function (err) {
+  				console.log('popup failed');
+  			});
+  		}
+  	}, {
+  		key: 'getInformation',
+  		value: function getInformation() {
+  			console.log('hello');
+  		}
+  	}, {
+  		key: 'render',
+  		value: function render() {
+  			return _react2.default.createElement(
+  				'div',
+  				null,
+  				_react2.default.createElement(
+  					'a',
+  					{ className: _OauthPopup2.default.oauthLogin, href: '#', onClick: this.logIn },
+  					'Hello, ',
+  					this.state.name
+  				),
+  				_react2.default.createElement(
+  					'a',
+  					{ className: _OauthPopup2.default.oauthLogin, href: '#', onClick: this.getInformation },
+  					'Get Info'
+  				)
+  			);
+  		}
+  	}]);
+  	return OauthPopup;
+  }(_react2.default.Component);
+  
+  exports.default = (0, _withStyles2.default)(OauthPopup, _OauthPopup2.default);
+
+/***/ },
 /* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -2515,15 +2544,15 @@ module.exports =
     value: true
   });
   
-  var _createBrowserHistory = __webpack_require__(121);
+  var _createBrowserHistory = __webpack_require__(122);
   
   var _createBrowserHistory2 = _interopRequireDefault(_createBrowserHistory);
   
-  var _createMemoryHistory = __webpack_require__(122);
+  var _createMemoryHistory = __webpack_require__(123);
   
   var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
   
-  var _useQueries = __webpack_require__(123);
+  var _useQueries = __webpack_require__(124);
   
   var _useQueries2 = _interopRequireDefault(_useQueries);
   
@@ -2550,7 +2579,7 @@ module.exports =
     value: true
   });
   
-  var _pg = __webpack_require__(130);
+  var _pg = __webpack_require__(131);
   
   var _pg2 = _interopRequireDefault(_pg);
   
@@ -2667,11 +2696,11 @@ module.exports =
   
   var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
   
-  var _passport = __webpack_require__(128);
+  var _passport = __webpack_require__(129);
   
   var _passport2 = _interopRequireDefault(_passport);
   
-  var _passportFacebook = __webpack_require__(129);
+  var _passportFacebook = __webpack_require__(130);
   
   var _db = __webpack_require__(39);
   
@@ -2871,7 +2900,7 @@ module.exports =
   
   var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
   
-  var _assign = __webpack_require__(23);
+  var _assign = __webpack_require__(22);
   
   var _assign2 = _interopRequireDefault(_assign);
   
@@ -3020,25 +3049,25 @@ module.exports =
     };
   }();
   
-  var _fs = __webpack_require__(25);
+  var _fs = __webpack_require__(24);
   
   var _fs2 = _interopRequireDefault(_fs);
   
-  var _path = __webpack_require__(26);
+  var _path = __webpack_require__(25);
   
   var _bluebird = __webpack_require__(18);
   
   var _bluebird2 = _interopRequireDefault(_bluebird);
   
-  var _jade = __webpack_require__(124);
+  var _jade = __webpack_require__(125);
   
   var _jade2 = _interopRequireDefault(_jade);
   
-  var _frontMatter = __webpack_require__(120);
+  var _frontMatter = __webpack_require__(121);
   
   var _frontMatter2 = _interopRequireDefault(_frontMatter);
   
-  var _markdownIt = __webpack_require__(126);
+  var _markdownIt = __webpack_require__(127);
   
   var _markdownIt2 = _interopRequireDefault(_markdownIt);
   
@@ -3414,7 +3443,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _Router = __webpack_require__(29);
+  var _Router = __webpack_require__(28);
   
   var _Router2 = _interopRequireDefault(_Router);
   
@@ -3422,19 +3451,19 @@ module.exports =
   
   var _fetch2 = _interopRequireDefault(_fetch);
   
-  var _App = __webpack_require__(30);
+  var _App = __webpack_require__(29);
   
   var _App2 = _interopRequireDefault(_App);
   
-  var _ContentPage = __webpack_require__(31);
+  var _ContentPage = __webpack_require__(30);
   
   var _ContentPage2 = _interopRequireDefault(_ContentPage);
   
-  var _NotFoundPage = __webpack_require__(37);
+  var _NotFoundPage = __webpack_require__(36);
   
   var _NotFoundPage2 = _interopRequireDefault(_NotFoundPage);
   
-  var _ErrorPage = __webpack_require__(32);
+  var _ErrorPage = __webpack_require__(31);
   
   var _ErrorPage2 = _interopRequireDefault(_ErrorPage);
   
@@ -3805,25 +3834,6 @@ module.exports =
           'p',
           null,
           'This file can be found in routes > home > Home.js!'
-        ),
-        _react2.default.createElement(
-          'ul',
-          { className: _Home2.default.news },
-          news.map(function (item, index) {
-            return _react2.default.createElement(
-              'li',
-              { key: index, className: _Home2.default.newsItem },
-              _react2.default.createElement(
-                'a',
-                { href: item.link, className: _Home2.default.newsTitle },
-                item.title
-              ),
-              _react2.default.createElement('span', {
-                className: _Home2.default.newsDesc,
-                dangerouslySetInnerHTML: { __html: item.contentSnippet }
-              })
-            );
-          })
         )
       )
     );
@@ -3835,14 +3845,6 @@ module.exports =
      * This source code is licensed under the MIT license found in the
      * LICENSE.txt file in the root directory of this source tree.
      */
-  
-  Home.propTypes = {
-    news: _react.PropTypes.arrayOf(_react.PropTypes.shape({
-      title: _react.PropTypes.string.isRequired,
-      link: _react.PropTypes.string.isRequired,
-      contentSnippet: _react.PropTypes.string
-    })).isRequired
-  };
   
   exports.default = (0, _withStyles2.default)(Home, _Home2.default);
 
@@ -4172,7 +4174,7 @@ module.exports =
 /* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
-  module.exports = { "default": __webpack_require__(114), __esModule: true };
+  module.exports = { "default": __webpack_require__(115), __esModule: true };
 
 /***/ },
 /* 60 */
@@ -4182,7 +4184,7 @@ module.exports =
   
   exports.__esModule = true;
   
-  var _promise = __webpack_require__(24);
+  var _promise = __webpack_require__(23);
   
   var _promise2 = _interopRequireDefault(_promise);
   
@@ -4225,7 +4227,7 @@ module.exports =
   
   exports.__esModule = true;
   
-  var _isIterable2 = __webpack_require__(100);
+  var _isIterable2 = __webpack_require__(101);
   
   var _isIterable3 = _interopRequireDefault(_isIterable2);
   
@@ -4318,27 +4320,27 @@ module.exports =
 
   /* WEBPACK VAR INJECTION */(function(module) {"use strict";
   
-  var _promise = __webpack_require__(24);
+  var _promise = __webpack_require__(23);
   
   var _promise2 = _interopRequireDefault(_promise);
   
-  var _setPrototypeOf = __webpack_require__(104);
+  var _setPrototypeOf = __webpack_require__(105);
   
   var _setPrototypeOf2 = _interopRequireDefault(_setPrototypeOf);
   
-  var _create = __webpack_require__(102);
+  var _create = __webpack_require__(103);
   
   var _create2 = _interopRequireDefault(_create);
   
-  var _typeof2 = __webpack_require__(110);
+  var _typeof2 = __webpack_require__(111);
   
   var _typeof3 = _interopRequireDefault(_typeof2);
   
-  var _iterator = __webpack_require__(106);
+  var _iterator = __webpack_require__(107);
   
   var _iterator2 = _interopRequireDefault(_iterator);
   
-  var _symbol = __webpack_require__(105);
+  var _symbol = __webpack_require__(106);
   
   var _symbol2 = _interopRequireDefault(_symbol);
   
@@ -4968,7 +4970,7 @@ module.exports =
   // object, this seems to be the most reliable technique that does not
   // use indirect eval (which violates Content Security Policy).
   (typeof global === "undefined" ? "undefined" : (0, _typeof3.default)(global)) === "object" ? global : (typeof window === "undefined" ? "undefined" : (0, _typeof3.default)(window)) === "object" ? window : (typeof self === "undefined" ? "undefined" : (0, _typeof3.default)(self)) === "object" ? self : undefined);
-  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(97)(module)))
+  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(98)(module)))
 
 /***/ },
 /* 64 */
@@ -5120,7 +5122,7 @@ module.exports =
   
   
   // module
-  exports.push([module.id, ".OauthPopup_oauthLogin_u2k {\r\n  color: pink;\r\n}", "", {"version":3,"sources":["/./src/components/OauthPopup/OauthPopup.scss"],"names":[],"mappings":"AAAA;EACE,YAAY;CACb","file":"OauthPopup.scss","sourcesContent":[".oauthLogin {\r\n  color: pink;\r\n}"],"sourceRoot":"webpack://"}]);
+  exports.push([module.id, ".OauthPopup_oauthLogin_u2k {\r\n  color: pink;\r\n  display: block;\r\n}", "", {"version":3,"sources":["/./src/components/OauthPopup/OauthPopup.scss"],"names":[],"mappings":"AAAA;EACE,YAAY;EACZ,eAAe;CAChB","file":"OauthPopup.scss","sourcesContent":[".oauthLogin {\r\n  color: pink;\r\n  display: block;\r\n}"],"sourceRoot":"webpack://"}]);
   
   // exports
   exports.locals = {
@@ -5691,7 +5693,7 @@ module.exports =
 /* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
-  var jade = __webpack_require__(22);
+  var jade = __webpack_require__(21);
   
   module.exports = function template(locals) {
   var jade_debug = [ new jade.DebugItem( 1, "C:\\Users\\nanja\\Desktop\\Projects\\Instagram Filters\\src\\views\\error.jade" ) ];
@@ -5979,7 +5981,7 @@ module.exports =
 /* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
-  var jade = __webpack_require__(22);
+  var jade = __webpack_require__(21);
   
   module.exports = function template(locals) {
   var jade_debug = [ new jade.DebugItem( 1, "C:\\Users\\nanja\\Desktop\\Projects\\Instagram Filters\\src\\views\\index.jade" ) ];
@@ -6083,670 +6085,6 @@ module.exports =
 
 /***/ },
 /* 95 */
-/***/ function(module, exports, __webpack_require__) {
-
-  var isarray = __webpack_require__(78)
-  
-  /**
-   * Expose `pathToRegexp`.
-   */
-  module.exports = pathToRegexp
-  module.exports.parse = parse
-  module.exports.compile = compile
-  module.exports.tokensToFunction = tokensToFunction
-  module.exports.tokensToRegExp = tokensToRegExp
-  
-  /**
-   * The main path matching regexp utility.
-   *
-   * @type {RegExp}
-   */
-  var PATH_REGEXP = new RegExp([
-    // Match escaped characters that would otherwise appear in future matches.
-    // This allows the user to escape special characters that won't transform.
-    '(\\\\.)',
-    // Match Express-style parameters and un-named parameters with a prefix
-    // and optional suffixes. Matches appear as:
-    //
-    // "/:test(\\d+)?" => ["/", "test", "\d+", undefined, "?", undefined]
-    // "/route(\\d+)"  => [undefined, undefined, undefined, "\d+", undefined, undefined]
-    // "/*"            => ["/", undefined, undefined, undefined, undefined, "*"]
-    '([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))'
-  ].join('|'), 'g')
-  
-  /**
-   * Parse a string for the raw tokens.
-   *
-   * @param  {string} str
-   * @return {!Array}
-   */
-  function parse (str) {
-    var tokens = []
-    var key = 0
-    var index = 0
-    var path = ''
-    var res
-  
-    while ((res = PATH_REGEXP.exec(str)) != null) {
-      var m = res[0]
-      var escaped = res[1]
-      var offset = res.index
-      path += str.slice(index, offset)
-      index = offset + m.length
-  
-      // Ignore already escaped sequences.
-      if (escaped) {
-        path += escaped[1]
-        continue
-      }
-  
-      var next = str[index]
-      var prefix = res[2]
-      var name = res[3]
-      var capture = res[4]
-      var group = res[5]
-      var modifier = res[6]
-      var asterisk = res[7]
-  
-      // Push the current path onto the tokens.
-      if (path) {
-        tokens.push(path)
-        path = ''
-      }
-  
-      var partial = prefix != null && next != null && next !== prefix
-      var repeat = modifier === '+' || modifier === '*'
-      var optional = modifier === '?' || modifier === '*'
-      var delimiter = res[2] || '/'
-      var pattern = capture || group || (asterisk ? '.*' : '[^' + delimiter + ']+?')
-  
-      tokens.push({
-        name: name || key++,
-        prefix: prefix || '',
-        delimiter: delimiter,
-        optional: optional,
-        repeat: repeat,
-        partial: partial,
-        asterisk: !!asterisk,
-        pattern: escapeGroup(pattern)
-      })
-    }
-  
-    // Match any characters still remaining.
-    if (index < str.length) {
-      path += str.substr(index)
-    }
-  
-    // If the path exists, push it onto the end.
-    if (path) {
-      tokens.push(path)
-    }
-  
-    return tokens
-  }
-  
-  /**
-   * Compile a string to a template function for the path.
-   *
-   * @param  {string}             str
-   * @return {!function(Object=, Object=)}
-   */
-  function compile (str) {
-    return tokensToFunction(parse(str))
-  }
-  
-  /**
-   * Prettier encoding of URI path segments.
-   *
-   * @param  {string}
-   * @return {string}
-   */
-  function encodeURIComponentPretty (str) {
-    return encodeURI(str).replace(/[\/?#]/g, function (c) {
-      return '%' + c.charCodeAt(0).toString(16).toUpperCase()
-    })
-  }
-  
-  /**
-   * Encode the asterisk parameter. Similar to `pretty`, but allows slashes.
-   *
-   * @param  {string}
-   * @return {string}
-   */
-  function encodeAsterisk (str) {
-    return encodeURI(str).replace(/[?#]/g, function (c) {
-      return '%' + c.charCodeAt(0).toString(16).toUpperCase()
-    })
-  }
-  
-  /**
-   * Expose a method for transforming tokens into the path function.
-   */
-  function tokensToFunction (tokens) {
-    // Compile all the tokens into regexps.
-    var matches = new Array(tokens.length)
-  
-    // Compile all the patterns before compilation.
-    for (var i = 0; i < tokens.length; i++) {
-      if (typeof tokens[i] === 'object') {
-        matches[i] = new RegExp('^(?:' + tokens[i].pattern + ')$')
-      }
-    }
-  
-    return function (obj, opts) {
-      var path = ''
-      var data = obj || {}
-      var options = opts || {}
-      var encode = options.pretty ? encodeURIComponentPretty : encodeURIComponent
-  
-      for (var i = 0; i < tokens.length; i++) {
-        var token = tokens[i]
-  
-        if (typeof token === 'string') {
-          path += token
-  
-          continue
-        }
-  
-        var value = data[token.name]
-        var segment
-  
-        if (value == null) {
-          if (token.optional) {
-            // Prepend partial segment prefixes.
-            if (token.partial) {
-              path += token.prefix
-            }
-  
-            continue
-          } else {
-            throw new TypeError('Expected "' + token.name + '" to be defined')
-          }
-        }
-  
-        if (isarray(value)) {
-          if (!token.repeat) {
-            throw new TypeError('Expected "' + token.name + '" to not repeat, but received `' + JSON.stringify(value) + '`')
-          }
-  
-          if (value.length === 0) {
-            if (token.optional) {
-              continue
-            } else {
-              throw new TypeError('Expected "' + token.name + '" to not be empty')
-            }
-          }
-  
-          for (var j = 0; j < value.length; j++) {
-            segment = encode(value[j])
-  
-            if (!matches[i].test(segment)) {
-              throw new TypeError('Expected all "' + token.name + '" to match "' + token.pattern + '", but received `' + JSON.stringify(segment) + '`')
-            }
-  
-            path += (j === 0 ? token.prefix : token.delimiter) + segment
-          }
-  
-          continue
-        }
-  
-        segment = token.asterisk ? encodeAsterisk(value) : encode(value)
-  
-        if (!matches[i].test(segment)) {
-          throw new TypeError('Expected "' + token.name + '" to match "' + token.pattern + '", but received "' + segment + '"')
-        }
-  
-        path += token.prefix + segment
-      }
-  
-      return path
-    }
-  }
-  
-  /**
-   * Escape a regular expression string.
-   *
-   * @param  {string} str
-   * @return {string}
-   */
-  function escapeString (str) {
-    return str.replace(/([.+*?=^!:${}()[\]|\/\\])/g, '\\$1')
-  }
-  
-  /**
-   * Escape the capturing group by escaping special characters and meaning.
-   *
-   * @param  {string} group
-   * @return {string}
-   */
-  function escapeGroup (group) {
-    return group.replace(/([=!:$\/()])/g, '\\$1')
-  }
-  
-  /**
-   * Attach the keys as a property of the regexp.
-   *
-   * @param  {!RegExp} re
-   * @param  {Array}   keys
-   * @return {!RegExp}
-   */
-  function attachKeys (re, keys) {
-    re.keys = keys
-    return re
-  }
-  
-  /**
-   * Get the flags for a regexp from the options.
-   *
-   * @param  {Object} options
-   * @return {string}
-   */
-  function flags (options) {
-    return options.sensitive ? '' : 'i'
-  }
-  
-  /**
-   * Pull out keys from a regexp.
-   *
-   * @param  {!RegExp} path
-   * @param  {!Array}  keys
-   * @return {!RegExp}
-   */
-  function regexpToRegexp (path, keys) {
-    // Use a negative lookahead to match only capturing groups.
-    var groups = path.source.match(/\((?!\?)/g)
-  
-    if (groups) {
-      for (var i = 0; i < groups.length; i++) {
-        keys.push({
-          name: i,
-          prefix: null,
-          delimiter: null,
-          optional: false,
-          repeat: false,
-          partial: false,
-          asterisk: false,
-          pattern: null
-        })
-      }
-    }
-  
-    return attachKeys(path, keys)
-  }
-  
-  /**
-   * Transform an array into a regexp.
-   *
-   * @param  {!Array}  path
-   * @param  {Array}   keys
-   * @param  {!Object} options
-   * @return {!RegExp}
-   */
-  function arrayToRegexp (path, keys, options) {
-    var parts = []
-  
-    for (var i = 0; i < path.length; i++) {
-      parts.push(pathToRegexp(path[i], keys, options).source)
-    }
-  
-    var regexp = new RegExp('(?:' + parts.join('|') + ')', flags(options))
-  
-    return attachKeys(regexp, keys)
-  }
-  
-  /**
-   * Create a path regexp from string input.
-   *
-   * @param  {string}  path
-   * @param  {!Array}  keys
-   * @param  {!Object} options
-   * @return {!RegExp}
-   */
-  function stringToRegexp (path, keys, options) {
-    var tokens = parse(path)
-    var re = tokensToRegExp(tokens, options)
-  
-    // Attach keys back to the regexp.
-    for (var i = 0; i < tokens.length; i++) {
-      if (typeof tokens[i] !== 'string') {
-        keys.push(tokens[i])
-      }
-    }
-  
-    return attachKeys(re, keys)
-  }
-  
-  /**
-   * Expose a function for taking tokens and returning a RegExp.
-   *
-   * @param  {!Array}  tokens
-   * @param  {Object=} options
-   * @return {!RegExp}
-   */
-  function tokensToRegExp (tokens, options) {
-    options = options || {}
-  
-    var strict = options.strict
-    var end = options.end !== false
-    var route = ''
-    var lastToken = tokens[tokens.length - 1]
-    var endsWithSlash = typeof lastToken === 'string' && /\/$/.test(lastToken)
-  
-    // Iterate over the tokens and create our regexp string.
-    for (var i = 0; i < tokens.length; i++) {
-      var token = tokens[i]
-  
-      if (typeof token === 'string') {
-        route += escapeString(token)
-      } else {
-        var prefix = escapeString(token.prefix)
-        var capture = '(?:' + token.pattern + ')'
-  
-        if (token.repeat) {
-          capture += '(?:' + prefix + capture + ')*'
-        }
-  
-        if (token.optional) {
-          if (!token.partial) {
-            capture = '(?:' + prefix + '(' + capture + '))?'
-          } else {
-            capture = prefix + '(' + capture + ')?'
-          }
-        } else {
-          capture = prefix + '(' + capture + ')'
-        }
-  
-        route += capture
-      }
-    }
-  
-    // In non-strict mode we allow a slash at the end of match. If the path to
-    // match already ends with a slash, we remove it for consistency. The slash
-    // is valid at the end of a path match, not in the middle. This is important
-    // in non-ending mode, where "/test/" shouldn't match "/test//route".
-    if (!strict) {
-      route = (endsWithSlash ? route.slice(0, -2) : route) + '(?:\\/(?=$))?'
-    }
-  
-    if (end) {
-      route += '$'
-    } else {
-      // In non-ending mode, we need the capturing groups to match as much as
-      // possible by using a positive lookahead to the end or next path segment.
-      route += strict && endsWithSlash ? '' : '(?=\\/|$)'
-    }
-  
-    return new RegExp('^' + route, flags(options))
-  }
-  
-  /**
-   * Normalize the given path string, returning a regular expression.
-   *
-   * An empty array can be passed in for the keys, which will hold the
-   * placeholder key descriptions. For example, using `/user/:id`, `keys` will
-   * contain `[{ name: 'id', delimiter: '/', optional: false, repeat: false }]`.
-   *
-   * @param  {(string|RegExp|Array)} path
-   * @param  {(Array|Object)=}       keys
-   * @param  {Object=}               options
-   * @return {!RegExp}
-   */
-  function pathToRegexp (path, keys, options) {
-    keys = keys || []
-  
-    if (!isarray(keys)) {
-      options = /** @type {!Object} */ (keys)
-      keys = []
-    } else if (!options) {
-      options = {}
-    }
-  
-    if (path instanceof RegExp) {
-      return regexpToRegexp(path, /** @type {!Array} */ (keys))
-    }
-  
-    if (isarray(path)) {
-      return arrayToRegexp(/** @type {!Array} */ (path), /** @type {!Array} */ (keys), options)
-    }
-  
-    return stringToRegexp(/** @type {string} */ (path), /** @type {!Array} */ (keys), options)
-  }
-
-
-/***/ },
-/* 96 */
-/***/ function(module, exports) {
-
-  module.exports = "data:image/png;base64,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"
-
-/***/ },
-/* 97 */
-/***/ function(module, exports) {
-
-  module.exports = function(module) {
-  	if(!module.webpackPolyfill) {
-  		module.deprecate = function() {};
-  		module.paths = [];
-  		// module.parent = undefined by default
-  		module.children = [];
-  		module.webpackPolyfill = 1;
-  	}
-  	return module;
-  }
-
-
-/***/ },
-/* 98 */
-/***/ function(module, exports) {
-
-  module.exports = require("./assets");
-
-/***/ },
-/* 99 */
-/***/ function(module, exports) {
-
-  module.exports = require("babel-polyfill");
-
-/***/ },
-/* 100 */
-/***/ function(module, exports) {
-
-  module.exports = require("babel-runtime/core-js/is-iterable");
-
-/***/ },
-/* 101 */
-/***/ function(module, exports) {
-
-  module.exports = require("babel-runtime/core-js/json/stringify");
-
-/***/ },
-/* 102 */
-/***/ function(module, exports) {
-
-  module.exports = require("babel-runtime/core-js/object/create");
-
-/***/ },
-/* 103 */
-/***/ function(module, exports) {
-
-  module.exports = require("babel-runtime/core-js/object/define-property");
-
-/***/ },
-/* 104 */
-/***/ function(module, exports) {
-
-  module.exports = require("babel-runtime/core-js/object/set-prototype-of");
-
-/***/ },
-/* 105 */
-/***/ function(module, exports) {
-
-  module.exports = require("babel-runtime/core-js/symbol");
-
-/***/ },
-/* 106 */
-/***/ function(module, exports) {
-
-  module.exports = require("babel-runtime/core-js/symbol/iterator");
-
-/***/ },
-/* 107 */
-/***/ function(module, exports) {
-
-  module.exports = require("babel-runtime/helpers/extends");
-
-/***/ },
-/* 108 */
-/***/ function(module, exports) {
-
-  module.exports = require("babel-runtime/helpers/objectWithoutProperties");
-
-/***/ },
-/* 109 */
-/***/ function(module, exports) {
-
-  module.exports = require("babel-runtime/helpers/slicedToArray");
-
-/***/ },
-/* 110 */
-/***/ function(module, exports) {
-
-  module.exports = require("babel-runtime/helpers/typeof");
-
-/***/ },
-/* 111 */
-/***/ function(module, exports) {
-
-  module.exports = require("body-parser");
-
-/***/ },
-/* 112 */
-/***/ function(module, exports) {
-
-  module.exports = require("classnames");
-
-/***/ },
-/* 113 */
-/***/ function(module, exports) {
-
-  module.exports = require("cookie-parser");
-
-/***/ },
-/* 114 */
-/***/ function(module, exports) {
-
-  module.exports = require("core-js/library/fn/get-iterator");
-
-/***/ },
-/* 115 */
-/***/ function(module, exports) {
-
-  module.exports = require("core-js/library/fn/object/create");
-
-/***/ },
-/* 116 */
-/***/ function(module, exports) {
-
-  module.exports = require("express");
-
-/***/ },
-/* 117 */
-/***/ function(module, exports) {
-
-  module.exports = require("express-graphql");
-
-/***/ },
-/* 118 */
-/***/ function(module, exports) {
-
-  module.exports = require("express-jwt");
-
-/***/ },
-/* 119 */
-/***/ function(module, exports) {
-
-  module.exports = require("fbjs/lib/emptyFunction");
-
-/***/ },
-/* 120 */
-/***/ function(module, exports) {
-
-  module.exports = require("front-matter");
-
-/***/ },
-/* 121 */
-/***/ function(module, exports) {
-
-  module.exports = require("history/lib/createBrowserHistory");
-
-/***/ },
-/* 122 */
-/***/ function(module, exports) {
-
-  module.exports = require("history/lib/createMemoryHistory");
-
-/***/ },
-/* 123 */
-/***/ function(module, exports) {
-
-  module.exports = require("history/lib/useQueries");
-
-/***/ },
-/* 124 */
-/***/ function(module, exports) {
-
-  module.exports = require("jade");
-
-/***/ },
-/* 125 */
-/***/ function(module, exports) {
-
-  module.exports = require("jsonwebtoken");
-
-/***/ },
-/* 126 */
-/***/ function(module, exports) {
-
-  module.exports = require("markdown-it");
-
-/***/ },
-/* 127 */
-/***/ function(module, exports) {
-
-  module.exports = require("node-fetch");
-
-/***/ },
-/* 128 */
-/***/ function(module, exports) {
-
-  module.exports = require("passport");
-
-/***/ },
-/* 129 */
-/***/ function(module, exports) {
-
-  module.exports = require("passport-facebook");
-
-/***/ },
-/* 130 */
-/***/ function(module, exports) {
-
-  module.exports = require("pg");
-
-/***/ },
-/* 131 */
-/***/ function(module, exports) {
-
-  module.exports = require("pretty-error");
-
-/***/ },
-/* 132 */
-/***/ function(module, exports) {
-
-  module.exports = require("react-dom/server");
-
-/***/ },
-/* 133 */
 /***/ function(module, exports, __webpack_require__) {
 
   var require;var require;(function(f){if(true){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.oauthioWeb = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return require(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
@@ -12317,6 +11655,676 @@ module.exports =
   
   },{}]},{},[8])(8)
   });
+
+/***/ },
+/* 96 */
+/***/ function(module, exports, __webpack_require__) {
+
+  var isarray = __webpack_require__(78)
+  
+  /**
+   * Expose `pathToRegexp`.
+   */
+  module.exports = pathToRegexp
+  module.exports.parse = parse
+  module.exports.compile = compile
+  module.exports.tokensToFunction = tokensToFunction
+  module.exports.tokensToRegExp = tokensToRegExp
+  
+  /**
+   * The main path matching regexp utility.
+   *
+   * @type {RegExp}
+   */
+  var PATH_REGEXP = new RegExp([
+    // Match escaped characters that would otherwise appear in future matches.
+    // This allows the user to escape special characters that won't transform.
+    '(\\\\.)',
+    // Match Express-style parameters and un-named parameters with a prefix
+    // and optional suffixes. Matches appear as:
+    //
+    // "/:test(\\d+)?" => ["/", "test", "\d+", undefined, "?", undefined]
+    // "/route(\\d+)"  => [undefined, undefined, undefined, "\d+", undefined, undefined]
+    // "/*"            => ["/", undefined, undefined, undefined, undefined, "*"]
+    '([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))'
+  ].join('|'), 'g')
+  
+  /**
+   * Parse a string for the raw tokens.
+   *
+   * @param  {string} str
+   * @return {!Array}
+   */
+  function parse (str) {
+    var tokens = []
+    var key = 0
+    var index = 0
+    var path = ''
+    var res
+  
+    while ((res = PATH_REGEXP.exec(str)) != null) {
+      var m = res[0]
+      var escaped = res[1]
+      var offset = res.index
+      path += str.slice(index, offset)
+      index = offset + m.length
+  
+      // Ignore already escaped sequences.
+      if (escaped) {
+        path += escaped[1]
+        continue
+      }
+  
+      var next = str[index]
+      var prefix = res[2]
+      var name = res[3]
+      var capture = res[4]
+      var group = res[5]
+      var modifier = res[6]
+      var asterisk = res[7]
+  
+      // Push the current path onto the tokens.
+      if (path) {
+        tokens.push(path)
+        path = ''
+      }
+  
+      var partial = prefix != null && next != null && next !== prefix
+      var repeat = modifier === '+' || modifier === '*'
+      var optional = modifier === '?' || modifier === '*'
+      var delimiter = res[2] || '/'
+      var pattern = capture || group || (asterisk ? '.*' : '[^' + delimiter + ']+?')
+  
+      tokens.push({
+        name: name || key++,
+        prefix: prefix || '',
+        delimiter: delimiter,
+        optional: optional,
+        repeat: repeat,
+        partial: partial,
+        asterisk: !!asterisk,
+        pattern: escapeGroup(pattern)
+      })
+    }
+  
+    // Match any characters still remaining.
+    if (index < str.length) {
+      path += str.substr(index)
+    }
+  
+    // If the path exists, push it onto the end.
+    if (path) {
+      tokens.push(path)
+    }
+  
+    return tokens
+  }
+  
+  /**
+   * Compile a string to a template function for the path.
+   *
+   * @param  {string}             str
+   * @return {!function(Object=, Object=)}
+   */
+  function compile (str) {
+    return tokensToFunction(parse(str))
+  }
+  
+  /**
+   * Prettier encoding of URI path segments.
+   *
+   * @param  {string}
+   * @return {string}
+   */
+  function encodeURIComponentPretty (str) {
+    return encodeURI(str).replace(/[\/?#]/g, function (c) {
+      return '%' + c.charCodeAt(0).toString(16).toUpperCase()
+    })
+  }
+  
+  /**
+   * Encode the asterisk parameter. Similar to `pretty`, but allows slashes.
+   *
+   * @param  {string}
+   * @return {string}
+   */
+  function encodeAsterisk (str) {
+    return encodeURI(str).replace(/[?#]/g, function (c) {
+      return '%' + c.charCodeAt(0).toString(16).toUpperCase()
+    })
+  }
+  
+  /**
+   * Expose a method for transforming tokens into the path function.
+   */
+  function tokensToFunction (tokens) {
+    // Compile all the tokens into regexps.
+    var matches = new Array(tokens.length)
+  
+    // Compile all the patterns before compilation.
+    for (var i = 0; i < tokens.length; i++) {
+      if (typeof tokens[i] === 'object') {
+        matches[i] = new RegExp('^(?:' + tokens[i].pattern + ')$')
+      }
+    }
+  
+    return function (obj, opts) {
+      var path = ''
+      var data = obj || {}
+      var options = opts || {}
+      var encode = options.pretty ? encodeURIComponentPretty : encodeURIComponent
+  
+      for (var i = 0; i < tokens.length; i++) {
+        var token = tokens[i]
+  
+        if (typeof token === 'string') {
+          path += token
+  
+          continue
+        }
+  
+        var value = data[token.name]
+        var segment
+  
+        if (value == null) {
+          if (token.optional) {
+            // Prepend partial segment prefixes.
+            if (token.partial) {
+              path += token.prefix
+            }
+  
+            continue
+          } else {
+            throw new TypeError('Expected "' + token.name + '" to be defined')
+          }
+        }
+  
+        if (isarray(value)) {
+          if (!token.repeat) {
+            throw new TypeError('Expected "' + token.name + '" to not repeat, but received `' + JSON.stringify(value) + '`')
+          }
+  
+          if (value.length === 0) {
+            if (token.optional) {
+              continue
+            } else {
+              throw new TypeError('Expected "' + token.name + '" to not be empty')
+            }
+          }
+  
+          for (var j = 0; j < value.length; j++) {
+            segment = encode(value[j])
+  
+            if (!matches[i].test(segment)) {
+              throw new TypeError('Expected all "' + token.name + '" to match "' + token.pattern + '", but received `' + JSON.stringify(segment) + '`')
+            }
+  
+            path += (j === 0 ? token.prefix : token.delimiter) + segment
+          }
+  
+          continue
+        }
+  
+        segment = token.asterisk ? encodeAsterisk(value) : encode(value)
+  
+        if (!matches[i].test(segment)) {
+          throw new TypeError('Expected "' + token.name + '" to match "' + token.pattern + '", but received "' + segment + '"')
+        }
+  
+        path += token.prefix + segment
+      }
+  
+      return path
+    }
+  }
+  
+  /**
+   * Escape a regular expression string.
+   *
+   * @param  {string} str
+   * @return {string}
+   */
+  function escapeString (str) {
+    return str.replace(/([.+*?=^!:${}()[\]|\/\\])/g, '\\$1')
+  }
+  
+  /**
+   * Escape the capturing group by escaping special characters and meaning.
+   *
+   * @param  {string} group
+   * @return {string}
+   */
+  function escapeGroup (group) {
+    return group.replace(/([=!:$\/()])/g, '\\$1')
+  }
+  
+  /**
+   * Attach the keys as a property of the regexp.
+   *
+   * @param  {!RegExp} re
+   * @param  {Array}   keys
+   * @return {!RegExp}
+   */
+  function attachKeys (re, keys) {
+    re.keys = keys
+    return re
+  }
+  
+  /**
+   * Get the flags for a regexp from the options.
+   *
+   * @param  {Object} options
+   * @return {string}
+   */
+  function flags (options) {
+    return options.sensitive ? '' : 'i'
+  }
+  
+  /**
+   * Pull out keys from a regexp.
+   *
+   * @param  {!RegExp} path
+   * @param  {!Array}  keys
+   * @return {!RegExp}
+   */
+  function regexpToRegexp (path, keys) {
+    // Use a negative lookahead to match only capturing groups.
+    var groups = path.source.match(/\((?!\?)/g)
+  
+    if (groups) {
+      for (var i = 0; i < groups.length; i++) {
+        keys.push({
+          name: i,
+          prefix: null,
+          delimiter: null,
+          optional: false,
+          repeat: false,
+          partial: false,
+          asterisk: false,
+          pattern: null
+        })
+      }
+    }
+  
+    return attachKeys(path, keys)
+  }
+  
+  /**
+   * Transform an array into a regexp.
+   *
+   * @param  {!Array}  path
+   * @param  {Array}   keys
+   * @param  {!Object} options
+   * @return {!RegExp}
+   */
+  function arrayToRegexp (path, keys, options) {
+    var parts = []
+  
+    for (var i = 0; i < path.length; i++) {
+      parts.push(pathToRegexp(path[i], keys, options).source)
+    }
+  
+    var regexp = new RegExp('(?:' + parts.join('|') + ')', flags(options))
+  
+    return attachKeys(regexp, keys)
+  }
+  
+  /**
+   * Create a path regexp from string input.
+   *
+   * @param  {string}  path
+   * @param  {!Array}  keys
+   * @param  {!Object} options
+   * @return {!RegExp}
+   */
+  function stringToRegexp (path, keys, options) {
+    var tokens = parse(path)
+    var re = tokensToRegExp(tokens, options)
+  
+    // Attach keys back to the regexp.
+    for (var i = 0; i < tokens.length; i++) {
+      if (typeof tokens[i] !== 'string') {
+        keys.push(tokens[i])
+      }
+    }
+  
+    return attachKeys(re, keys)
+  }
+  
+  /**
+   * Expose a function for taking tokens and returning a RegExp.
+   *
+   * @param  {!Array}  tokens
+   * @param  {Object=} options
+   * @return {!RegExp}
+   */
+  function tokensToRegExp (tokens, options) {
+    options = options || {}
+  
+    var strict = options.strict
+    var end = options.end !== false
+    var route = ''
+    var lastToken = tokens[tokens.length - 1]
+    var endsWithSlash = typeof lastToken === 'string' && /\/$/.test(lastToken)
+  
+    // Iterate over the tokens and create our regexp string.
+    for (var i = 0; i < tokens.length; i++) {
+      var token = tokens[i]
+  
+      if (typeof token === 'string') {
+        route += escapeString(token)
+      } else {
+        var prefix = escapeString(token.prefix)
+        var capture = '(?:' + token.pattern + ')'
+  
+        if (token.repeat) {
+          capture += '(?:' + prefix + capture + ')*'
+        }
+  
+        if (token.optional) {
+          if (!token.partial) {
+            capture = '(?:' + prefix + '(' + capture + '))?'
+          } else {
+            capture = prefix + '(' + capture + ')?'
+          }
+        } else {
+          capture = prefix + '(' + capture + ')'
+        }
+  
+        route += capture
+      }
+    }
+  
+    // In non-strict mode we allow a slash at the end of match. If the path to
+    // match already ends with a slash, we remove it for consistency. The slash
+    // is valid at the end of a path match, not in the middle. This is important
+    // in non-ending mode, where "/test/" shouldn't match "/test//route".
+    if (!strict) {
+      route = (endsWithSlash ? route.slice(0, -2) : route) + '(?:\\/(?=$))?'
+    }
+  
+    if (end) {
+      route += '$'
+    } else {
+      // In non-ending mode, we need the capturing groups to match as much as
+      // possible by using a positive lookahead to the end or next path segment.
+      route += strict && endsWithSlash ? '' : '(?=\\/|$)'
+    }
+  
+    return new RegExp('^' + route, flags(options))
+  }
+  
+  /**
+   * Normalize the given path string, returning a regular expression.
+   *
+   * An empty array can be passed in for the keys, which will hold the
+   * placeholder key descriptions. For example, using `/user/:id`, `keys` will
+   * contain `[{ name: 'id', delimiter: '/', optional: false, repeat: false }]`.
+   *
+   * @param  {(string|RegExp|Array)} path
+   * @param  {(Array|Object)=}       keys
+   * @param  {Object=}               options
+   * @return {!RegExp}
+   */
+  function pathToRegexp (path, keys, options) {
+    keys = keys || []
+  
+    if (!isarray(keys)) {
+      options = /** @type {!Object} */ (keys)
+      keys = []
+    } else if (!options) {
+      options = {}
+    }
+  
+    if (path instanceof RegExp) {
+      return regexpToRegexp(path, /** @type {!Array} */ (keys))
+    }
+  
+    if (isarray(path)) {
+      return arrayToRegexp(/** @type {!Array} */ (path), /** @type {!Array} */ (keys), options)
+    }
+  
+    return stringToRegexp(/** @type {string} */ (path), /** @type {!Array} */ (keys), options)
+  }
+
+
+/***/ },
+/* 97 */
+/***/ function(module, exports) {
+
+  module.exports = "data:image/png;base64,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"
+
+/***/ },
+/* 98 */
+/***/ function(module, exports) {
+
+  module.exports = function(module) {
+  	if(!module.webpackPolyfill) {
+  		module.deprecate = function() {};
+  		module.paths = [];
+  		// module.parent = undefined by default
+  		module.children = [];
+  		module.webpackPolyfill = 1;
+  	}
+  	return module;
+  }
+
+
+/***/ },
+/* 99 */
+/***/ function(module, exports) {
+
+  module.exports = require("./assets");
+
+/***/ },
+/* 100 */
+/***/ function(module, exports) {
+
+  module.exports = require("babel-polyfill");
+
+/***/ },
+/* 101 */
+/***/ function(module, exports) {
+
+  module.exports = require("babel-runtime/core-js/is-iterable");
+
+/***/ },
+/* 102 */
+/***/ function(module, exports) {
+
+  module.exports = require("babel-runtime/core-js/json/stringify");
+
+/***/ },
+/* 103 */
+/***/ function(module, exports) {
+
+  module.exports = require("babel-runtime/core-js/object/create");
+
+/***/ },
+/* 104 */
+/***/ function(module, exports) {
+
+  module.exports = require("babel-runtime/core-js/object/define-property");
+
+/***/ },
+/* 105 */
+/***/ function(module, exports) {
+
+  module.exports = require("babel-runtime/core-js/object/set-prototype-of");
+
+/***/ },
+/* 106 */
+/***/ function(module, exports) {
+
+  module.exports = require("babel-runtime/core-js/symbol");
+
+/***/ },
+/* 107 */
+/***/ function(module, exports) {
+
+  module.exports = require("babel-runtime/core-js/symbol/iterator");
+
+/***/ },
+/* 108 */
+/***/ function(module, exports) {
+
+  module.exports = require("babel-runtime/helpers/extends");
+
+/***/ },
+/* 109 */
+/***/ function(module, exports) {
+
+  module.exports = require("babel-runtime/helpers/objectWithoutProperties");
+
+/***/ },
+/* 110 */
+/***/ function(module, exports) {
+
+  module.exports = require("babel-runtime/helpers/slicedToArray");
+
+/***/ },
+/* 111 */
+/***/ function(module, exports) {
+
+  module.exports = require("babel-runtime/helpers/typeof");
+
+/***/ },
+/* 112 */
+/***/ function(module, exports) {
+
+  module.exports = require("body-parser");
+
+/***/ },
+/* 113 */
+/***/ function(module, exports) {
+
+  module.exports = require("classnames");
+
+/***/ },
+/* 114 */
+/***/ function(module, exports) {
+
+  module.exports = require("cookie-parser");
+
+/***/ },
+/* 115 */
+/***/ function(module, exports) {
+
+  module.exports = require("core-js/library/fn/get-iterator");
+
+/***/ },
+/* 116 */
+/***/ function(module, exports) {
+
+  module.exports = require("core-js/library/fn/object/create");
+
+/***/ },
+/* 117 */
+/***/ function(module, exports) {
+
+  module.exports = require("express");
+
+/***/ },
+/* 118 */
+/***/ function(module, exports) {
+
+  module.exports = require("express-graphql");
+
+/***/ },
+/* 119 */
+/***/ function(module, exports) {
+
+  module.exports = require("express-jwt");
+
+/***/ },
+/* 120 */
+/***/ function(module, exports) {
+
+  module.exports = require("fbjs/lib/emptyFunction");
+
+/***/ },
+/* 121 */
+/***/ function(module, exports) {
+
+  module.exports = require("front-matter");
+
+/***/ },
+/* 122 */
+/***/ function(module, exports) {
+
+  module.exports = require("history/lib/createBrowserHistory");
+
+/***/ },
+/* 123 */
+/***/ function(module, exports) {
+
+  module.exports = require("history/lib/createMemoryHistory");
+
+/***/ },
+/* 124 */
+/***/ function(module, exports) {
+
+  module.exports = require("history/lib/useQueries");
+
+/***/ },
+/* 125 */
+/***/ function(module, exports) {
+
+  module.exports = require("jade");
+
+/***/ },
+/* 126 */
+/***/ function(module, exports) {
+
+  module.exports = require("jsonwebtoken");
+
+/***/ },
+/* 127 */
+/***/ function(module, exports) {
+
+  module.exports = require("markdown-it");
+
+/***/ },
+/* 128 */
+/***/ function(module, exports) {
+
+  module.exports = require("node-fetch");
+
+/***/ },
+/* 129 */
+/***/ function(module, exports) {
+
+  module.exports = require("passport");
+
+/***/ },
+/* 130 */
+/***/ function(module, exports) {
+
+  module.exports = require("passport-facebook");
+
+/***/ },
+/* 131 */
+/***/ function(module, exports) {
+
+  module.exports = require("pg");
+
+/***/ },
+/* 132 */
+/***/ function(module, exports) {
+
+  module.exports = require("pretty-error");
+
+/***/ },
+/* 133 */
+/***/ function(module, exports) {
+
+  module.exports = require("react-ajax");
+
+/***/ },
+/* 134 */
+/***/ function(module, exports) {
+
+  module.exports = require("react-dom/server");
 
 /***/ }
 /******/ ]);
